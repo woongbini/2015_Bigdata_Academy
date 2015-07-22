@@ -1,0 +1,5 @@
+package polymorphism;
+
+public class Triangle extends Geometry {
+
+}

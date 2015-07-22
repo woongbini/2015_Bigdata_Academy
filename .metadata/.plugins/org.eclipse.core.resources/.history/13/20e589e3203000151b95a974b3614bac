@@ -1,0 +1,18 @@
+package test2;
+
+public class Employee {
+	private String name;
+	private String tell;
+	public Employee(String name, String tell) {
+		this.name = name;
+		this.tell = tell;
+	}
+	public void setName(String name) { this.name = name; }
+	public String getName() { return name; }
+	public void setTell(String tell) { this.tell = tell; }
+	public String getTell() { return tell; }
+	
+	public void displayEmployee() {
+		System.out.println("이름: "+name+" 전화번호: "+tell);
+	}
+}

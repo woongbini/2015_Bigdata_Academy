@@ -1,0 +1,11 @@
+package polymorphism;
+
+public class Circle extends Geometry {
+	private int radius;
+	
+	public Circle(int x, int y, int radius) {
+		super(x,y);
+	}
+	public void draw() {   }
+	
+}

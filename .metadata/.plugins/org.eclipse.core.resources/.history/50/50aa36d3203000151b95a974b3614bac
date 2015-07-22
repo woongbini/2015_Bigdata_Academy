@@ -1,0 +1,11 @@
+package test2;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Employee emp1 = new Employee("김트롤", "01011112222");
+		Employee emp2 = new Employee("이트롤", "01022223333");
+		emp1.displayEmployee();
+	}
+
+}

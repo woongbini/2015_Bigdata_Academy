@@ -1,0 +1,11 @@
+package test2;
+
+public class TempEmployee extends Employee {
+	double salarybytime;
+	public TempEmployee(String name, String tell, double salarybytime) {
+		super(name, tell);
+		this.salarybytime = salarybytime;
+	}
+	
+
+}

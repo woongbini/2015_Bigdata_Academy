@@ -1,0 +1,4 @@
+
+public class SalesEmployee extends RegularEmployee {
+
+}

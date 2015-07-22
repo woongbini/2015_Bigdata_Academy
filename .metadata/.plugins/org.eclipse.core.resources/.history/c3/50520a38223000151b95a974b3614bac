@@ -1,0 +1,17 @@
+package test2;
+
+public class SalesEmployee extends RegularEmployee {
+	private double salessalary;
+	public SalesEmployee(String name, String tell, double salary, double salessalary) {
+		super(name, tell, salary);
+		this.salessalary = salessalary;
+	}
+	public void setSalesSalary(double salessalary) { this.salessalary = salessalary; }
+	public double getSalesSalary() { return salessalary; }
+	
+	public void displayEmployee() {
+		super.displayEmployee();
+		System.out.println("추가급여: "+salessalary);
+	}
+
+}

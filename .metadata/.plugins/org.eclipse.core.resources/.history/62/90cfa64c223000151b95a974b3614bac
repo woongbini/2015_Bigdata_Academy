@@ -1,0 +1,17 @@
+package test2;
+
+public class TempEmployee extends Employee {
+	private double salarybytime;
+	public TempEmployee(String name, String tell, double salarybytime) {
+		super(name, tell);
+		this.salarybytime = salarybytime;
+	}
+	public void setSalaryByTime(double salaeybytime) { this.salarybytime = salarybytime; }
+	public double getSalaryByTime() { return salarybytime; }
+
+	public void displayEmployee() {
+		System.out.println();
+		super.displayEmployee();
+		System.out.println("시간당수당: "+salarybytime);
+	}
+}

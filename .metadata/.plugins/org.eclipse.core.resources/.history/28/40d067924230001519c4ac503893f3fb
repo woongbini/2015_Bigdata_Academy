@@ -1,0 +1,9 @@
+package test_ISpellingChecker;
+
+public interface ISpellingChecker { //맞춤법 검사기
+	String [] check();
+	void setWords(String [] words);
+	void setLanguage(int lang);
+
+	
+}

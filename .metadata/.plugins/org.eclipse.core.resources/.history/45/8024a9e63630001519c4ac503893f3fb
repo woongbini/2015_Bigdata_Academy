@@ -1,0 +1,27 @@
+package employee;
+
+public class Employee {
+	private String empno;
+	private String name;
+	private date entryDate;
+	private String address;
+	
+	
+	
+	public Employee(String empno, String name, date enrtyDate, String address, date entryDate) {
+		this.empno = empno;
+		this.name = name;
+		this.entryDate = entryDate;
+		this.address = address;
+	}
+	public void setName(String name) { this.name = name; }
+	public String getName() { return this.name; }
+	public void setEntryDate(date entryDate) { this.entryDate = entryDate; }
+	public date getEntryDate() { return entryDate; }
+	public void setAddress(String address) { this.address = address; }
+	public String getAddress() { return this.address; }
+	public void displayEmployee() { 
+		System.out.println(empno + ":" + name + "," + entryDate +","+ address);
+	}
+	
+}
