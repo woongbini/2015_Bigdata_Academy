@@ -1,0 +1,15 @@
+package polymorphism;
+
+public class Rectangle extends Geometry {
+	private int width, height;
+	
+	public Rectangle (int x, int y, int width, int height) { 
+		super(x, y);
+		this.height = height;
+		this.width = width;
+	}
+	public void draw() {
+		System.out.println("Rectangle - ÁÂÇ¥:"+x+","+y+" °¡·Î¼¼·Î :"+width+","+height
+				+" ³ÐÀÌ : "+width*height);
+	}
+}
