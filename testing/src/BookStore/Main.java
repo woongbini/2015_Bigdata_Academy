@@ -9,6 +9,10 @@ public class Main {
 		String maker = null;
 		Scanner sc = new Scanner(maker);
 		
+		switch(maker) {
+		case "A":
+			break;
+		}
 		
 		
 		
