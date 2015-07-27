@@ -15,7 +15,6 @@ INDEX VERSION 1.127+C:\Users\multimedia\2015_Bigdata_Academy\.metadata\.plugins\
 1509003190.index
 3227230145.index
 2330857962.index
-2029190215.index
 3150694745.index
 1106408436.index
 1442487239.index

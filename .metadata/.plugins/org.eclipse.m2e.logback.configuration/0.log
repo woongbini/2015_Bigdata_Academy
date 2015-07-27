@@ -647,3 +647,7 @@ org.eclipse.core.runtime.CoreException: Launch configuration Main references clo
 2015-07-27 09:41:39,978 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\multimedia\2015_Bigdata_Academy\15_07_24\SpringOrder\src\main\resources
 2015-07-27 09:41:39,981 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2015-07-27 09:41:39,981 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\multimedia\2015_Bigdata_Academy\15_07_24\SpringOrder\src\test\resources
+2015-07-27 10:00:53,673 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-07-27 10:00:53,676 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\multimedia\2015_Bigdata_Academy\15_07_24\SpringOrder\src\main\resources
+2015-07-27 10:00:53,678 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-07-27 10:00:53,678 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\multimedia\2015_Bigdata_Academy\15_07_24\SpringOrder\src\test\resources
