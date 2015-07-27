@@ -13,7 +13,7 @@ public class Main {
 	public static void main(String[] args) {
 		//ApplicationContext ctx  = new ClassPathXmlApplicationContext("beans.xml"); //IOC컨테이너, 애플리케이션 컨텍스트를 생성하는 가장 일반적인 방법
 		//ApplicationContext ctx = new FileSystemXmlApplicationContext("src/main/java/beans.xml"); //파일 시스템의 절대 경로 또는 상대 경로로 설정 파일을 지정할때
-		ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
+		ApplicationContext ctx = new AnnotationConfigApplicationContext("src/main/java/beans.xml");
 		
 		CustomerService customerService = (CustomerService)ctx.getBean("customerService");
 		
