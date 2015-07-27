@@ -623,3 +623,23 @@ org.eclipse.core.runtime.CoreException: Launch configuration Main references clo
 2015-07-26 14:11:58,067 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\multimedia\2015_Bigdata_Academy\15_07_24\SpringHello\src\main\resources
 2015-07-26 14:11:58,083 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2015-07-26 14:11:58,083 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\multimedia\2015_Bigdata_Academy\15_07_24\SpringHello\src\test\resources
+2015-07-27 09:08:56,723 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-07-27 09:08:56,727 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\multimedia\2015_Bigdata_Academy\15_07_24\SpringOrder\src\main\resources
+2015-07-27 09:08:56,729 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-07-27 09:08:56,729 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\multimedia\2015_Bigdata_Academy\15_07_24\SpringOrder\src\test\resources
+2015-07-27 09:09:33,830 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-07-27 09:09:33,831 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\multimedia\2015_Bigdata_Academy\15_07_24\SpringOrder\src\main\resources
+2015-07-27 09:09:33,834 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-07-27 09:09:33,834 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\multimedia\2015_Bigdata_Academy\15_07_24\SpringOrder\src\test\resources
+2015-07-27 09:09:51,542 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-07-27 09:09:51,542 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\multimedia\2015_Bigdata_Academy\15_07_24\SpringOrder\src\main\resources
+2015-07-27 09:09:51,544 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-07-27 09:09:51,545 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\multimedia\2015_Bigdata_Academy\15_07_24\SpringOrder\src\test\resources
+2015-07-27 09:25:40,453 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-07-27 09:25:40,454 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\multimedia\2015_Bigdata_Academy\15_07_24\SpringOrder\src\main\resources
+2015-07-27 09:25:40,455 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-07-27 09:25:40,455 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\multimedia\2015_Bigdata_Academy\15_07_24\SpringOrder\src\test\resources
+2015-07-27 09:25:50,997 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-07-27 09:25:50,997 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\multimedia\2015_Bigdata_Academy\15_07_24\SpringOrder\src\main\resources
+2015-07-27 09:25:50,998 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-07-27 09:25:50,998 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\multimedia\2015_Bigdata_Academy\15_07_24\SpringOrder\src\test\resources

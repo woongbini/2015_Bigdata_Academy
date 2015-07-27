@@ -1,0 +1,5 @@
+package com.ensoa.order.repository;
+
+public class CustomerRepository {
+
+}
