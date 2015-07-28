@@ -14,6 +14,11 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/*Java EE사양으로는 필터가 http가 아닌 요청과 응답을 필터링할수있지만 현재로서는 요청객체는 항상
+httpserverletrequest이고, 응답 객체는 항상httpServerletResponse이므로 이들 인터페이스 타입으로 형변환을 하여 사용할수있다.
+logging기능을 수행하는 필터를 작성한다.
+*/
+
 @WebFilter(
 		filterName="loggingFilter",
 		servletNames={"customerServlet"},
@@ -22,7 +27,7 @@ import javax.servlet.http.HttpServletResponse;
 public class LoggingFilter implements Filter {
 
 	public void init(FilterConfig config) throws ServletException {
-		System.out.println(config.getFilterName() + " 필터가 시작되었습니다.");
+		System.out.println(config.getFilterName() + "필터링이 시작되었습니다.");
 	}
 	
 	public void destroy() {

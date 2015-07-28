@@ -1,2 +1,4 @@
 eclipse.preferences.version=1
+encoding//src/main/java/com/ensoa/order/filter/CharacterEncodingFilter.java=UTF-8
+encoding//src/main/java/com/ensoa/order/filter/LoggingFilter.java=UTF-8
 encoding//src/main/java/com/ensoa/order/servlet/CustomerServlet.java=UTF-8
