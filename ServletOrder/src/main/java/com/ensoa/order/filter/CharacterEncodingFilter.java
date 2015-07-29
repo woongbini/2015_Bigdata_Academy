@@ -59,35 +59,3 @@ public class CharacterEncodingFilter implements Filter {
 }
 
 
-/*
-@WebFilter(
-		filterName="characterEncodingFilter",
-		urlPatterns={"/*"},
-		initParams={
-				@WebInitParam(name="encoding", value="UTF-8")
-		}
-)
-public class CharacterEncodingFilter implements Filter {
-	
-	private String encoding = null;
-
-	public void init(FilterConfig config) throws ServletException {
-		this.encoding = config.getInitParameter("encoding");
-		System.out.println(config.getFilterName() + " �븘�꽣媛� �떆�옉�릺�뿀�뒿�땲�떎.");
-	}
-
-	public void destroy() {
-	}
-
-	public void doFilter(ServletRequest request, ServletResponse response,
-			FilterChain chain) throws IOException, ServletException {
-		if(request.getCharacterEncoding() == null) {
-			if(encoding != null) {
-				request.setCharacterEncoding(encoding);
-				response.setCharacterEncoding(encoding);
-			}
-		}
-		chain.doFilter(request, response);
-	}
-}
-*/
