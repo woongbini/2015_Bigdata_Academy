@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <customers>
 	<customer>
-		<name>이일</name>
+		<name>김하비</name>
 		<address>서울시</address>
 		<email>lee1@gmail.com</email>
 	</customer>
 	<customer>
-		<name>김일</name>
+		<name>이하비</name>
 		<address>부산시</address>
 		<email>kim1@gmail.com</email>
 	</customer>
 	<customer>
-		<name>박일</name>
+		<name>박하비</name>
 		<address>인천시</address>
 		<email>park1@gmail.com</email>
 	</customer>
 	<customer>
-		<name>최일</name>
+		<name>최하비</name>
 		<address>대구시</address>
 		<email>choi1@gmail.com</email>
 	</customer>
 	<customer>
-		<name>한일</name>
+		<name>한하비</name>
 		<address>광주시</address>
 		<email>han1@gmail.com</email>
 	</customer>

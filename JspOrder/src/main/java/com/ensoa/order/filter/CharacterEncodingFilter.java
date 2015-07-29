@@ -27,11 +27,10 @@ public class CharacterEncodingFilter implements Filter {
 
 	public void init(FilterConfig config) throws ServletException {
 		this.encoding = config.getInitParameter("encoding");
-		System.out.println(config.getFilterName() + " í•„í„°ê°€ ì‹œì‘ë˜ì—ˆìŠµë‹ˆë‹¤.");
+		System.out.println(config.getFilterName() + " ¼­ºí¸´ÀÌ ½ÃÀÛ‰ç´ë¿ë");
 	}
 
-	public void destroy() {
-	}
+	public void destroy() { }
 
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain chain) throws IOException, ServletException {

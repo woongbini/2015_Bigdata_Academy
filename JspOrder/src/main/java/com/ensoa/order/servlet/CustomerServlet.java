@@ -28,11 +28,11 @@ public class CustomerServlet extends HttpServlet {
 	
 	@Override
 	public void init(ServletConfig config) throws ServletException {
-		System.out.println(config.getServletName() + " ì„œë¸”ë¦¿ì´ ì‹œì‘ë˜ì—ˆìŠµë‹ˆë‹¤.");
+		System.out.println(config.getServletName() + " ¼­ºí¸´ÀÌ ½ÃÀÛ!");
 	}
 	@Override
 	public void destroy() {
-		System.out.println("ì„œë¸”ë¦¿ì´ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
+		System.out.println("¼­ºí¸´ ³¡ÀÌ¿è ¤Ğ¤Ğ");
 	}
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
@@ -40,16 +40,16 @@ public class CustomerServlet extends HttpServlet {
 		List<Customer> customers = new ArrayList<Customer>();
 		for(int i = 0; i < 10; ++i) {
 			Customer customer = new Customer();
-			customer.setName("ì´ë¦„"+i);
-			customer.setAddress("ì£¼ì†Œ" + i);
+			customer.setName("ÀÌ¸§"+i);
+			customer.setAddress("ÁÖ¼Ò" + i);
 			customer.setEmail("email"+i+"@gmail.com");
 			customers.add(customer);
 		}
 		request.setAttribute("customers", customers);
 		Customer customer = new Customer();
-		customer.setName("ì „ë³‘ì„ ");
-		customer.setAddress("ì„œìš¸ì‹œ");
-		customer.setEmail("bsjun@enosa.co.kr");
+		customer.setName("±èºí¸´");
+		customer.setAddress("¿ÀÇÏÀÌµµ");
+		customer.setEmail("wppngnistrljdf@jkdsfjkdf.com");
 		request.setAttribute("customer", customer);
 		String url = "customer";
 		url += request.getParameter("action");

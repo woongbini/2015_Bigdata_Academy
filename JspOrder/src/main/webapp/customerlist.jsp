@@ -149,7 +149,7 @@ text-align: center;
 	</c:forTokens>
 	</ul>
 	<c:import url="include.jsp">
-		<c:param name="name" value="전병선"/>
+		<c:param name="name" value="김웅빈"/>
 	</c:import>
 	<%--
 	<c:redirect url="include.jsp">
