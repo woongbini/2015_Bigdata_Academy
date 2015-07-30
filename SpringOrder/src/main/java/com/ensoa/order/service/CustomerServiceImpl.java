@@ -21,6 +21,7 @@ public class CustomerServiceImpl  implements CustomerService {
 	@Autowired
 //	@Inject
 	private CustomerRepository repository;
+	
 	@Override
 	public Customer getCustomer(long id) {
 		CustomerEntity entity =  repository.findOne(id);
