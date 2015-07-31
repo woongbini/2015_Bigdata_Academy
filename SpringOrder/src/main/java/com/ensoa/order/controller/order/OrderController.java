@@ -45,8 +45,21 @@ public class OrderController {
 			customer.setAddress("°æ±â");
 			customer.setEmail("wsjdk@sdkjd.com");
 			order.setCustomer(customer);
-			order
-			
-			
+			order.setItems(new ArrayList<OrderItemModel>());
+			model.addAttribute("order",  order);
+			model.addAttribute("products", productModels);
+			return "create";
+		}
+	private List<ProductModel> convert(List<Product> products ) {
+		List<ProductModel> productModels = new ArrayList<ProductModel>();
+		for(Product product : products) {
+			ProductModel productModel = new ProductModel();
+			productModel.buildModel(product);
+			productModels.add(productModel);
+		}
+		return productModels;
 	}
+			
+			
+	
 }

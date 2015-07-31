@@ -1,15 +1,24 @@
 package com.ensoa.order.model;
 
-import com.ensoa.order.domain.Customer;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotBlank;
+
+import com.ensoa.order.domain.Customer;
 /*µµ¸ŞÀÎÅ¬·¡½º´Â ¼­ºñ½º °è¾à ¶Ç´Â dto·Î¼­ÀÇ ¿ªÇÒÀ» ÇÏ¸ç, ¿£ÅÍÆ¼ Å¬·¡½º´Â ³ªÁß¿¡ »ìÆìº¸°ÔµÉ or¸ÅÇÎ¿¡ »ç¿ëµÈ´Ù
 ±×¸®°í ¸ğµ¨ Å¬·¡½º´Â ºä¿¡ »ç¿ëµÉ µ¥ÀÌÅÍ¸¦ Ç¥ÇöÇÏ´Âµ¥ »ç¿ëµÈ´Ù. 
 */
 
 public class CustomerModel {
 	private long id;
+	@Size(min=2, max=10, message="ÀÌ¸§Àº 2ÀÚ ÀÌ»ó 10ÀÚ±îÁö ÀÔ´Ï´Ù")
+	@Pattern(regexp="^[A-Za-z0-9°¡-ÆR]+$", message="°ø¹é¹®ÀÚ ¾øÀÌ ¼ıÀÚ¿Í ¹®ÀÚ¸¸ ÀÔ·ÂÇÏ¼¼¿ä")
 	private String name;
+	@Size(max=60, message="ÁÖ¼Ò´Â 60ÀÚ±îÁö ÀÔ·ÂÇÒ¼öÀÖ½À´Ï´Ù")
 	private String address;
+	@NotBlank(message="Á¤È®ÇÑ ÀÌ¸áÁÖ¼Ò ÀÔ·Â")
 	private String email;
 	
 	public long getId() {	return id;	}
