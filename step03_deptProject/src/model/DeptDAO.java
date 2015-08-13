@@ -92,7 +92,7 @@ public class DeptDAO {
 	}
 
 	//select * from DEPT where DEPTNO=? ¸¦ »Ì¾Æº¸ÀÚ
-	public static DeptDTO getDept(int deptno) throws SQLException {
+	public static DeptDTO getDeptAll(int deptno) throws SQLException {
 		DeptDTO dep = null;
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -116,9 +116,8 @@ public class DeptDAO {
 	public static void main(String[] args) {
 		DeptDTO data = null;
 		try {
-			data = DeptDAO.getDept(10);
+			data = DeptDAO.getDeptAll(10);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println(data.toString());

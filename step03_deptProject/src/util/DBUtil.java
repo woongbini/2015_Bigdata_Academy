@@ -42,6 +42,10 @@ public class DBUtil {
 	
 	public static void close(Connection con, Statement stmt, ResultSet rset) {
 		try {
+			if(rset != null) {
+				rset.close();
+				rset = null;
+			}
 			if(stmt != null) { //쓰레기로 ㄱㄱ
 				stmt.close();
 				stmt = null;
@@ -49,10 +53,6 @@ public class DBUtil {
 			if(con != null) { //성공했을때를 대비하여 null로 초기화
 				con.close();
 				con = null; 
-			}
-			if(rset != null) {
-				rset.close();
-				rset = null;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
