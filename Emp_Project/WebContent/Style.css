@@ -1,0 +1,36 @@
+@CHARSET "EUC-KR";
+
+
+#float_layer{
+
+position : fixed; absolute;
+
+text-align: center;
+
+left: 200px;
+
+top: 300px;
+
+margin: 0px;
+
+padding: 0px;
+
+}
+
+.fixed-bottom-left
+{position:fixed;bottom:auto; top:105px;margin-bottom:0 auto;z-index:900;}
+
+.fixed-bottom-right
+{position:fixed;bottom:auto; top:105px;left:90%; margin-bottom:0 auto;z-index:900;}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{ .fixed-bottom    /* Å©·Ò position fixed bottom */
+{position:fixed;bottom:55px; top:auto;margin-bottom: 0 auto;}
+}
+
+* html .fixed-bottom-left /* IE6 position fixed Bottom */
+{position:absolute;bottom:auto;top:expression(eval(document.documentElement.scrollTop-5+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));}
+
+* html .fixed-bottom-right /* IE6 position fixed Bottom */
+{position:absolute;left:90%;bottom:auto;top:expression(eval(document.documentElement.scrollTop-5+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));}
