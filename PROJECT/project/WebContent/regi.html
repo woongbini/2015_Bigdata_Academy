@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='stylesheet'	href="http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css">
+<link rel='stylesheet'	href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+<link	 rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
+<link rel="stylesheet" href="css/site.min.css" />
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<meta charset="UTF-8">
+<title>regi.html</title>
+<style>
+header {
+	background: rgba(0, 153, 255, 0.6);
+	color: white;
+	font-size: 100px;
+	font-family: "Nanum Brush Script";
+	text-align: center;
+	margin: 5px;
+	margin-bottom: 15px;
+	padding: 8px;
+}
+
+nav {
+	background: rgba(0, 153, 255, 0.6);
+	color: black;
+	font-size: 30px;
+	margin: 5px;
+	margin-bottom: 20px;
+	padding: 100px;
+	float: left;
+}
+
+table {
+	display: block;
+	margin: auto;
+	font-family: "Nanum Gothic";
+	padding-top: 0.625em;
+	padding-bottom: 0.625em;
+	padding-left: 5em;
+	padding-right: 0.75em;
+	border: 2px solid black;
+	width: 600px;
+	vertical-align: center;
+}
+</style>
+</head>
+<body>
+	<!-- <div>
+		<header>이 구역의 체육인은 나야</header>
+	</div> -->
+	<!-- <div>
+		<nav></nav>
+	</div>  -->
+	<div>
+		<form action="mydb" method="post">
+			<section>
+			
+				<table>
+				
+					<tr>
+						<td>제목:</td>
+						<td><input type="text" name="title"
+							style="width: 400px; font-family: Nanum Gothic"
+							placeholder="제목을 입력해주세요" required autofocus></td>
+					</tr>
+					<tr>
+						<td>지역:</td>
+						<td><input list="city" required
+							style="font-family: Nanum Gothic"> <datalist id="city">
+								<option value="부천시">
+								<option value="고양시">
+							</datalist> <input list="district" required
+							style="font-family: Nanum Gothic"> <datalist
+								id="district">
+								<option value="원미구">
+								<option value="소사구">
+							</datalist></td>
+					</tr>
+					<tr>
+						<td>날짜:</td>
+						<td><input type="date" name="date" min="2015-08-16"
+							style="font-family: Nanum Gothic" required></td>
+					</tr>
+					<tr>
+						<td>시간:</td>
+						<td><input type="time" name="time"
+							style="font-family: Nanum Gothic" required></td>
+					</tr>
+					<tr>
+						<td>나이대:</td>
+						<td><input list="age" style="font-family: Nanum Gothic"
+							required> <datalist id="age">
+								<option value='10대'>
+								<option value='20대' selected>
+								<option value='30대'>
+								<option value='40대'>
+								<option value='50대'>
+								<option value='60대'>
+							</datalist></td>
+					</tr>
+					<tr>
+						<td>모집인원수:</td>
+						<td><input type="number" name="number" min="1"
+							style="font-family: Nanum Gothic" required></td>
+					</tr>
+					<tr>
+						<td>성별:</td>
+						<td><input type="radio" class="radio" name="gender" value="male">남자
+
+							<input type="radio" name="gender" value="female">여자 <input
+							type="radio" name="gender" value="coed">혼성</td>
+					</tr>
+					<tr>
+						<td>장소:</td>
+						<td><input type="text" name="location" required> <a
+							href="#" onclick="javascript:popupOpen('map.jsp'); return false;">
+								<button type="button" class="btn btn-default">
+									<span class="glyphicon glyphicon-search"></span>지도에서 찾기
+								</button>
+						</a></td>
+					</tr>
+					<tr>
+						<td>참여선수</td>
+						<td><a href="#"
+							onclick="javascript:popupOpen('member.html'); return false;">
+								<button type="button" class="btn btn-default">
+									<span class="glyphicon glyphicon-search"></span>찾기
+								</button>
+						</a></td>
+					</tr>
+					<tr>
+						<td>추가 내용</td>
+						<td><textarea name="detail" rows="10" cols="50"
+								style="font-family: Nanum Gothic; position: relative">
+			</textarea>
+						<td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><a href="index.html">
+								<button name="command" class="btn btn-primary"
+									style="float: right;margin: 2px">취소</button>
+						</a>   <input type="submit" class="btn btn-primary" value="등록"
+							style="float: right;margin: 2px"> <input type="hidden" name="command"
+							value="register"></td>
+					</tr>
+				</table>
+			</section>
+		</form>
+	</div>
+<!-- 
+	<script type="text/javascript">
+		function popupOpen(popUrl) { //팝업창에 출력될 페이지 URL
+			var popOption = "width=370, height=360, resizable=no, scrollbars=no, status=no;"; //팝업창 옵션(optoin)
+			window.open(popUrl, "", popOption);
+		}
+	</script>
+ -->
+</body>
+</html>
