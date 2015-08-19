@@ -23,37 +23,44 @@ public class RegiDAO {
 			System.out.println("db연결 성공");
 			
 			// insert 문장만 실행가능한 객체 생성
-			pstmt = con.prepareStatement("insert into dept values(?,?,?,?,?,?,?)");
+			pstmt = con.prepareStatement("insert into regi_table values(?,?,?,?,?,?,?,?,?,?,?,?)");
 
 			// 데이터 대입 - ? 표기순으로 값 대입
+			pstmt.setInt(1, regi.getBoard_number());
 			pstmt.setString(2, regi.getTitle());
 			pstmt.setString(3, regi.getRegion());
 			pstmt.setDate(4, regi.getDate());
-			pstmt.setTime(5, regi.getTime());
+			pstmt.setInt(5, regi.getNumber_of_person());
+			pstmt.setString(6, regi.getAge());
 			pstmt.setString(7,regi.getGender());
-		
-			pstmt.setString(7, regi.getDetail());
+			pstmt.setString(8,regi.getSport());
+			pstmt.setString(9,regi.getUser_id());
+			pstmt.setFloat(10, regi.getLocation_x());
+			pstmt.setFloat(11, regi.getLocation_y());
+			pstmt.setString(12, regi.getDetail());
 
 			// DB에 insert 실행
 			result = pstmt.executeUpdate();// DML문장 실행 메소드
+			System.out.println("db저장성공");
 		} finally {
 			DBUtil.close(con, pstmt);
 		}
 		return result;
-
 	}
-/*	create table regi_table(
-			1.board_number  			number,
-			title 							varchar2(50),
-			region 						varchar2(30),
-			date_time				 	timestamp,
-			number_of_person  	number,
-			age 							varchar2(10),
-			gender 						varchar2(10),
-			location_x  				number(12,9),
-			location_y  				number(12,9),
-			detail  						varchar2(100)
-			);*/
+/*	public class RegiDTO {
+	private int board_number;
+	private String title;
+	private String region;
+	private Date date;
+	private int number_of_person;
+	private String age;
+	private String gender;
+	private String sport;
+	private String user_id;
+	private float location_x;
+	private float location_y;
+	private String detail;
+*/
 	public static ArrayList<RegiDTO> getRegiAll() throws SQLException {
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -63,20 +70,27 @@ public class RegiDAO {
 
 		try {
 			con = DBUtil.getConnection();
-			pstmt = con.prepareStatement("select * from regi_table");
+			pstmt = con.prepareStatement("select * from regi_table ");
 			// table 존재할 경우 무조건 정상반환, 데이터 존재 유무는 매소드 통해서 검증 필수
 			rset = pstmt.executeQuery();
 
 			/* boolean next() : 해당 위치상의 행이 존재할 경우 true반환, 없을 경우 false */
 			data = new ArrayList<RegiDTO>(); // 실제 쓰일 때 바로 위에 객체 생성해주기
 			while (rset.next()) {
-				data.add(new RegiDTO( rset.getInt(1),rset.getString(2), rset.getString(3),rset.getInt(5), rset.getString(6),rset.getString(7),
-						rset.getFloat(8), rset.getFloat(9),rset.getString(10)));
+				data.add(new RegiDTO(rset.getInt(1),rset.getString(2),rset.getString(3),rset.getDate(4),rset.getInt(5),rset.getString(6),
+						rset.getString(7),rset.getString(8),rset.getString(9),rset.getFloat(10),rset.getFloat(11),rset.getString(12)));
 			}
 		} finally {
 			DBUtil.close(con, pstmt, rset);
 		}
 		return data;
+	}
+	public static void main(String[] args){
+		try {
+			System.out.println(getRegiAll());
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery floating menu</title>
+<style type="text/css">
+<!--
+body{margin:0px; padding:0px; background:#fff;}
+#fl_menu{position:absolute; top:50px; left:0px; z-index:9999; width:150px; height:50px;}
+#fl_menu .label{padding-left:20px; line-height:50px; font-family:"Arial Black", Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; background:#000; color:#fff; letter-spacing:7px;}
+#fl_menu .menu{display:none;}
+#fl_menu .menu .menu_item{display:block; background:#000; color:#bbb; border-top:1px solid #333; padding:10px 20px; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:none;}
+#fl_menu .menu a.menu_item:hover{background:#333; color:#fff;}
+.content{width:520px; margin:50px auto;}
+-->
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+</head>
+<body>More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a>
+
+<div id="fl_menu">
+	<div class="label">MENU</div>
+	<div class="menu">
+    	<a href="#" class="menu_item">An menu item</a>
+        <a href="#" class="menu_item">A long menu item</a>
+        <a href="#" class="menu_item">Item 3</a>
+        <a href="#" class="menu_item">Another one</a>
+        <a href="#" class="menu_item">A really, really long menu item</a>
+        <a href="#" class="menu_item">Menu item 6</a>
+        <a href="#" class="menu_item">And one more</a>
+        <a href="#" class="menu_item">A tiny</a>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aa<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aa<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aa<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aa<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aa<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aa<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aa<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aa<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aa<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>aa<br>
+
+<script type="text/javascript">
+function FloatMenu(){
+	var animationSpeed=1500;
+	var animationEasing='easeOutQuint';
+	var scrollAmount=$(document).scrollTop();
+	var newPosition=menuPosition+scrollAmount;
+	if($(window).height()<$('#fl_menu').height()+$('#fl_menu .menu').height()){
+		$('#fl_menu').css('top',menuPosition);
+	} else {
+		$('#fl_menu').stop().animate({top: newPosition}, animationSpeed, animationEasing);
+	}
+}
+$(window).load(function() {
+	menuPosition=$('#fl_menu').position().top;
+	FloatMenu();
+});
+$(window).scroll(function () { 
+	FloatMenu();
+});
+jQuery(document).ready(function(){
+	var fadeSpeed=500;
+	$("#fl_menu").hover(
+		function(){ //mouse over
+			$('#fl_menu .label').fadeTo(fadeSpeed, 1);
+			$("#fl_menu .menu").fadeIn(fadeSpeed);
+		},
+		function(){ //mouse out
+			$('#fl_menu .label').fadeTo(fadeSpeed, 0.75);
+			$("#fl_menu .menu").fadeOut(fadeSpeed);
+		}
+	);
+});
+</script>
+
+
+
+</body>
+</html>

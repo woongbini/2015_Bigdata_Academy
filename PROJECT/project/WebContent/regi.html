@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="css/site.min.css" />
 <script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
 <meta charset="UTF-8">
 <title>regi.html</title>
 <style>
@@ -48,27 +47,25 @@ table {
 </style>
 </head>
 <body>
-	<!-- <div>
+	<div>
 		<header>이 구역의 체육인은 나야</header>
-	</div> -->
-	<!-- <div>
+	</div>
+	<div>
 		<nav></nav>
-	</div>  -->
+	</div>
 	<div>
 		<form action="mydb" method="post">
 			<section>
-			
 				<table>
-				
 					<tr>
 						<td>제목:</td>
-						<td><input type="text" name="title"
+						<td><input type="text" name="title" 
 							style="width: 400px; font-family: Nanum Gothic"
 							placeholder="제목을 입력해주세요" required autofocus></td>
 					</tr>
 					<tr>
 						<td>지역:</td>
-						<td><input list="city" required
+						<td><input list="city" name="city" required
 							style="font-family: Nanum Gothic"> <datalist id="city">
 								<option value="부천시">
 								<option value="고양시">
@@ -91,7 +88,7 @@ table {
 					</tr>
 					<tr>
 						<td>나이대:</td>
-						<td><input list="age" style="font-family: Nanum Gothic"
+						<td><input list="age" name="age" style="font-family: Nanum Gothic"
 							required> <datalist id="age">
 								<option value='10대'>
 								<option value='20대' selected>
@@ -108,7 +105,7 @@ table {
 					</tr>
 					<tr>
 						<td>성별:</td>
-						<td><input type="radio" class="radio" name="gender" value="male">남자
+						<td><input type="radio" name="gender" value="male">남자
 
 							<input type="radio" name="gender" value="female">여자 <input
 							type="radio" name="gender" value="coed">혼성</td>
@@ -133,31 +130,34 @@ table {
 					</tr>
 					<tr>
 						<td>추가 내용</td>
-						<td><textarea name="detail" rows="10" cols="50"
+						<td><textarea name="detail" rows="10" cols="50" data-provide="typeahead"
 								style="font-family: Nanum Gothic; position: relative">
 			</textarea>
 						<td>
 					</tr>
 					<tr>
 						<td></td>
+						
 						<td><a href="index.html">
-								<button name="command" class="btn btn-primary"
-									style="float: right;margin: 2px">취소</button>
-						</a>   <input type="submit" class="btn btn-primary" value="등록"
-							style="float: right;margin: 2px"> <input type="hidden" name="command"
-							value="register"></td>
+								<button name="cancel" class="btn btn-primary" style="float: right; margin: 2px">취소</button>
+								
+								
+						</a> <input type="submit" class="btn btn-primary" value="등록" 	style="float: right; margin: 2px"> 
+						<input type="hidden" name="command" value="register">
+							
+							</td>
 					</tr>
 				</table>
 			</section>
 		</form>
 	</div>
-<!-- 
+
 	<script type="text/javascript">
 		function popupOpen(popUrl) { //팝업창에 출력될 페이지 URL
-			var popOption = "width=370, height=360, resizable=no, scrollbars=no, status=no;"; //팝업창 옵션(optoin)
+			var popOption = "width=500, height=500, resizable=no, scrollbars=no, status=no;"; //팝업창 옵션(optoin)
 			window.open(popUrl, "", popOption);
 		}
 	</script>
- -->
+
 </body>
 </html>

@@ -3,23 +3,28 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta name="generator" content="Bootply" />
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, maximum-scale=1">
-	
-<link rel="stylesheet" href="css/style_light.css" />
-<script type="text/javascript" src="js/tinybox.js"></script>	
-	
-<link rel='stylesheet'
-	href="http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css">
-<link rel='stylesheet'
-	href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
-<link rel="stylesheet"
-	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel='stylesheet'	href="http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css">
+<link rel='stylesheet'	href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+<link rel="stylesheet"	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
-
-
-
+<!-- floating start-->
+<link href="css/page_floating.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="js/jquery_mini.js"></script>
+<script language="javascript" src="js/jquery.dimensions.js"></script>
+<script language="javascript">
+	var name = "#floatMenu";
+	var menuYloc = null;
+	
+		$(document).ready(function(){
+			menuYloc = parseInt($(name).css("top").substring(0,$(name).css("top").indexOf("px")))
+			$(window).scroll(function () { 
+				offset = menuYloc+$(document).scrollTop()+"px";
+				$(name).animate({top:offset},{duration:500,queue:false});
+			});
+		}); 
+	 </script>
+	 <!-- floating end-->
 <title>main.html</title>
 <style type="text/css">
 .header {
@@ -42,38 +47,86 @@ body {
 	height: 35px;
 	color: rgba(0, 153, 255, 0.6);
 }
+.logo_img{
+	
+	height: 150px;
+}
+/*floating start*/
+#floatMenu {
+		position:absolute;
+		top:-10px;
+		left:-110%;
+		margin-left:250px;
+		width:290px;
+		}
+		#floatMenu ul {
+			margin-bottom:20px;
+			}
+			#floatMenu ul li a {
+				display:block;
+				border:1px solid #999;
+				background-color:#222;
+				border-left:6px solid #999;
+				text-decoration:none;
+				color:#ccc;
+				padding:5px 5px 5px 25px;
+			}
+			#floatMenu ul li a:hover {
+				color:#fff;
+				background-color:#333333;
+			}
+			#floatMenu ul.menu1 li a:hover {
+				border-color:#09f;
+			}
+			#floatMenu ul.menu2 li a:hover {
+				border-color:#9f0;
+			}
+			#floatMenu ul.menu3 li a:hover {
+				border-color:#f09;
+			}
+			/*floating end*/
+
 </style>
 </head>
 <body>
-	<div class="header">
-		<p>이 구역의 체육인은 나야</p>
+	<div class="header" >
+		<p>
+		<img class="logo_img" src="img/checkered12.png">
+		이 구역의 체육인은 나야
+		<img  class="logo_img" src="img/logo.png">
+		</p>
+		
 	</div>
-	<div class="container-fluid">
-		<!--left-->
+	<div class="container-fluid" >
+		<!--left메뉴-->
 		<div class="col-sm-2">
 			<!--  운동종목 카테고리 -->
-			<div class="row">
+			<div class="row" id="floatMenu">
 				<div class="col-md-8">
 					<div class="list-group">
 						<a href="#" class="list-group-item active"
 							style="background: rgba(0, 153, 255, 0.6)">Category</a> <a
 							href="#" class="list-group-item"> <abbr title="축구"> <img
-								class="icon" src="img/sport-pictos/soccer42.png" alt="Soccer"></abbr>
+								class="icon" src="img/sport-pictos/soccer42.png" alt="Soccer">
+								축구
+						</abbr>
 						</a> <a href="#" class="list-group-item"> <abbr title="야구">
 								<img class="icon" src="img/sport-pictos/baseball23.png"
-								alt="Baseball">
+								alt="Baseball"> 야구
 						</abbr>
 						</a> <a href="#" class="list-group-item"> <abbr title="테니스">
 								<img class="icon" src="img/sport-pictos/tennis17.png"
-								alt="Tennis">
+								alt="Tennis"> 테니스
 						</abbr>
 						</a> <a href="#" class="list-group-item"> <abbr title="농구">
 								<img class="icon" src="img/sport-pictos/basketball34.png"
-								alt="Basketball">
+								alt="Basketball"> 농구
 						</abbr>
 						</a> <a href="#" class="list-group-item"> <span
 							class="badge badge-primary">38</span> <abbr title="런닝"> <img
-								class="icon" src="img/sport-pictos/sprint.png" alt="Running"></abbr>
+								class="icon" src="img/sport-pictos/sprint.png" alt="Running">
+								런닝
+						</abbr>
 						</a>
 					</div>
 					<hr>
@@ -84,7 +137,9 @@ body {
 								<img class="img-rounded" src="img/thumbnail-1.jpg">
 								<div class="caption text-center">
 									<h3>아이디</h3>
-									<p>간략한 정보<br>(관심지역,관심운동)</p>
+									<p>
+										간략한 정보<br>(관심지역,관심운동)
+									</p>
 
 									<div class="col-md-16">
 										<div class="btn-group">
@@ -109,205 +164,65 @@ body {
 			</div>
 		</div>
 
-		<!--/left-->
+		<!--/left 메뉴-->
 
-		<!--center-->
+		<!--center 메뉴-->
 		<!-- 장소/사람 게시판 탭 -->
+		<form action="mydb" method="post">
 		<div class="col-sm-6">
 			<div class="row">
 				<div class="panel">
 					<ul id="myTab1" class="nav nav-tabs nav-justified">
-						<li class="active"><a href="#location" data-toggle="tab">장소게시판</a></li>
+						<li class="active">
+						
+						<a  href="#location"  data-toggle="tab">장소게시판
+						
+						</a>
+						</li>
+						
 						<li><a href="#people" data-toggle="tab">사람게시판</a></li>
 					</ul>
-					<div id="myTabContent" class="tab-content">
-						<div class="tab-pane fade active in" id="location">
-							<div class="col-xs-12">
-								<h2>게시글1 : 배드민턴 같이 해요</h2>
-
-								<p>글쓰기 폼에서 입력한 정보 보여주는 곳</p>
-								
-								<!-- 아코디언 시작 -->
-								<div class="panel-group" id="accordion1">
-								      <div class="panel">	      
-						              <div class="panel-heading">
-						              
-								<ul class="list-inline">
-									<p class="pull-right">
-									<span class="label label-default">keyword</span> <span
-										class="label label-default">tag</span> <span
-										class="label label-default">post</span>
-								</p>
-									<li><a href="#">2 Days Ago</a></li>
-									<li>	
-						                    <a data-toggle="collapse" data-target="#collapseOne"><i class="glyphicon glyphicon-comment"></i>	2 Comments</a>
-								    
-						                 
-						              </li>
-									
-									
-									<li><a href="#"><i class="glyphicon glyphicon-share"></i>
-											14 Shares</a></li>
-								</ul>
-							</div>
-							
-						              
-						                <div id="collapseOne" class="panel-collapse collapse in">
-						                  <div class="panel-body">
-						                    댓글보여주는 페이지
-						                  </div>
-						                </div>
-							</div>
-							</div>
-							</div>
-
-							<hr>
-
-							<div class="col-xs-12">
-								<h2>게시글2</h2>
-								<p>게시글2</p>
-								<p class="lead">
-									<button class="btn btn-default">Read More</button>
-								</p>
-								<p class="pull-right">
-									<span class="label label-default">keyword</span> <span
-										class="label label-default">tag</span> <span
-										class="label label-default">post</span>
-								</p>
-								<ul class="list-inline">
-									<li><a href="#">4 Days Ago</a></li>
-									<li><a href="#"><i class="glyphicon glyphicon-comment"></i>
-											7 Comments</a></li>
-									<li><a href="#"><i class="glyphicon glyphicon-share"></i>
-											56 Shares</a></li>
-								</ul>
-							</div>
-							<div class="col-xs-12">
-								<h2>게시글2</h2>
-								<p>게시글2</p>
-								<p class="lead">
-									<button class="btn btn-default">Read More</button>
-								</p>
-								<p class="pull-right">
-									<span class="label label-default">keyword</span> <span
-										class="label label-default">tag</span> <span
-										class="label label-default">post</span>
-								</p>
-								<ul class="list-inline">
-									<li><a href="#">4 Days Ago</a></li>
-									<li><a href="#"><i class="glyphicon glyphicon-comment"></i>
-											7 Comments</a></li>
-									<li><a href="#"><i class="glyphicon glyphicon-share"></i>
-											56 Shares</a></li>
-								</ul>
-							</div>
-							<div class="col-xs-12">
-								<h2>게시글2</h2>
-								<p>게시글2</p>
-								<p class="lead">
-									<button class="btn btn-default">Read More</button>
-								</p>
-								<p class="pull-right">
-									<span class="label label-default">keyword</span> <span
-										class="label label-default">tag</span> <span
-										class="label label-default">post</span>
-								</p>
-								<ul class="list-inline">
-									<li><a href="#">4 Days Ago</a></li>
-									<li><a href="#"><i class="glyphicon glyphicon-comment"></i>
-											7 Comments</a></li>
-									<li><a href="#"><i class="glyphicon glyphicon-share"></i>
-											56 Shares</a></li>
-								</ul>
-							</div>
-
-							<div class="col-xs-12">
-								<h2>게시글2</h2>
-								<p>게시글2</p>
-								<p class="lead">
-									<button class="btn btn-default">Read More</button>
-								</p>
-								<p class="pull-right">
-									<span class="label label-default">keyword</span> <span
-										class="label label-default">tag</span> <span
-										class="label label-default">post</span>
-								</p>
-								<ul class="list-inline">
-									<li><a href="#">4 Days Ago</a></li>
-									<li><a href="#"><i class="glyphicon glyphicon-comment"></i>
-											7 Comments</a></li>
-									<li><a href="#"><i class="glyphicon glyphicon-share"></i>
-											56 Shares</a></li>
-								</ul>
-							</div>
+					<!-- 장소게시판 시작 -->
+					<div id="myTabContent"class="tab-content">
+						<div class="tab-pane fade active in"  id="location">
+						
+						<iframe name="location_list" src="location_list.jsp"  style="border: none;background-color:transparent;width:100%;height:700px;scrolling:'no'"></iframe>
 						</div>
+						<!-- 장소게시판 끝 -->
+						<!--  사람게시판 시작 -->
+						<div class="tab-pane fade" id="people" >
 
-						<div class="tab-pane fade" id="people">
-							<div class="col-xs-12">
-								<h2>게시글3</h2>
-								<p>게시글3</p>
-								<p class="lead">
-									<button class="btn btn-default">Read More</button>
-								</p>
-								<p class="pull-right">
-									<span class="label label-default">keyword</span> <span
-										class="label label-default">tag</span> <span
-										class="label label-default">post</span>
-								</p>
-								<ul class="list-inline">
-									<li><a href="#">2 Days Ago</a></li>
-									<li><a href="#"><i class="glyphicon glyphicon-comment"></i>
-											2 Comments</a></li>
-									<li><a href="#"><i class="glyphicon glyphicon-share"></i>
-											14 Shares</a></li>
-								</ul>
-							</div>
 
-							<hr>
-							<div class="col-xs-12">
-								<h2>게시글4</h2>
-								<p>게시글4</p>
-								<p class="lead">
-									<button class="btn btn-default">Read More</button>
-								</p>
-								<p class="pull-right">
-									<span class="label label-default">keyword</span> <span
-										class="label label-default">tag</span> <span
-										class="label label-default">post</span>
-								</p>
-								<ul class="list-inline">
-									<li><a href="#">4 Days Ago</a></li>
-									<li><a href="#"><i class="glyphicon glyphicon-comment"></i>
-											7 Comments</a></li>
-									<li><a href="#"><i class="glyphicon glyphicon-share"></i>
-											56 Shares</a></li>
-								</ul>
-							</div>
+							<iframe name="people_list" src="people_list.jsp"  style="border: none;background-color:transparent;width:100%;height:700px;scrolling:'no'"></iframe>
+						
 						</div>
-
-
-
 					</div>
 				</div>
 			</div>
-			<hr>
-			<div class="col-md-3" style="float: right" id="testclick1">
-				<input type="button" class="btn btn-primary btn-block" value="글쓰기"
-					style="align: 'right'">
+			<!--  /사람게시판 -->
 
+			<!--  하단 버튼(글쓰기) -->
+			<div class="col-md-3" style="float: right">
+				<input type="button" class="btn btn-primary btn-block" value="글쓰기"	style="align: 'right'">
+			</div>
+			<div class="col-md-3" style="float: right">
+				<input type="button" class="btn btn-primary btn-block" value="조회" style="align: 'right'">
+					<input type="hidden" name="command"  value="get_location">
 			</div>
 		</div>
+		
+		
+		
+		</form>
+	
+		<!--/center 메뉴-->
 
-
-
-		<!--/center-->
-
-		<!--right-->
-		<div class="col-sm-3">
+		<!--right 메뉴-->
+		<div  class="col-sm-3" >
 			<h2>Side</h2>
 			<div class="panel panel-default">
-				<div class="panel-heading">히스토리</div>
-				<div class="panel-body">내가 본 게시글들</div>
+				<div class="panel-heading">나의 찜 리스트</div>
+				<div class="panel-body">내가 찜한 게시글들</div>
 			</div>
 			<hr>
 			<div class="panel panel-default">
@@ -316,9 +231,7 @@ body {
 			</div>
 			<hr>
 		</div>
-
-
-		<!--/right-->
+		<!--/right 메뉴-->
 		<hr>
 	</div>
 
@@ -328,17 +241,5 @@ body {
 	<script
 		src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	
-	<!-- light box -->
-	<script type="text/javascript">
-	T$('testclick1').onclick = function(){TINY.box.show('regi.html',1,600,600,1)}
-	
-	var content2 = "<img src='images/rhino.jpg' width='298' height='373' alt='' />";
-	T$('testclick2').onclick = function(){TINY.box.show(content2,0,0,0,1)}
-	
-	var content3 = "This will disappear in 3 seconds.";
-	T$('testclick3').onclick = function(){TINY.box.show(content3,0,0,0,0,3)}
-	</script>
-	
 </body>
 </html>
