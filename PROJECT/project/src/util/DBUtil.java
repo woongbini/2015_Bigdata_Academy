@@ -19,7 +19,7 @@ public class DBUtil {
 
 	// 재사용 코드 -> 간결화
 	public static Connection getConnection() throws SQLException {
-		return DriverManager.getConnection("jdbc:oracle:thin:@114.207.112.111:1521:B2ENEDU", "EDU_A23", "bosomi56");
+		return DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:XE","admin01","4321");
 	}
 
 	public static void close(Connection con, Statement stmt) {

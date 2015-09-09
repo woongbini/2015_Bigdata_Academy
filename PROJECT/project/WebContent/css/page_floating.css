@@ -8,7 +8,6 @@
 	margin:0 auto;
 	background-color:#222;
 	color:#ffffff;
-	font-family:"Lucida Grande", "Lucida Sans", "Trebuchet MS", verdana, sans-serif;
 	}
 	#page-wrap #header{
 		background-color:#444;
@@ -20,10 +19,6 @@
 			font-size:2.8em;
 			margin-bottom:10px;
 			line-height:0.9em;
-			}
-		#page-wrap #header h2{
-			margin-left:45px;
-			font-size:1.7em;
 			}
 	#page-wrap #content{
 		background:url(images/content_bg.jpg) no-repeat;
